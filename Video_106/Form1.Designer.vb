@@ -25,11 +25,14 @@ Partial Class Form1
         Me.btnName = New System.Windows.Forms.Button()
         Me.btnColor = New System.Windows.Forms.Button()
         Me.btnShowInfo = New System.Windows.Forms.Button()
+        Me.btnDoors = New System.Windows.Forms.Button()
+        Me.btnAccelerate = New System.Windows.Forms.Button()
+        Me.btnPowerWeight = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnName
         '
-        Me.btnName.Location = New System.Drawing.Point(12, 30)
+        Me.btnName.Location = New System.Drawing.Point(12, 12)
         Me.btnName.Name = "btnName"
         Me.btnName.Size = New System.Drawing.Size(150, 23)
         Me.btnName.TabIndex = 0
@@ -38,7 +41,7 @@ Partial Class Form1
         '
         'btnColor
         '
-        Me.btnColor.Location = New System.Drawing.Point(12, 59)
+        Me.btnColor.Location = New System.Drawing.Point(12, 41)
         Me.btnColor.Name = "btnColor"
         Me.btnColor.Size = New System.Drawing.Size(150, 23)
         Me.btnColor.TabIndex = 1
@@ -47,18 +50,48 @@ Partial Class Form1
         '
         'btnShowInfo
         '
-        Me.btnShowInfo.Location = New System.Drawing.Point(12, 120)
+        Me.btnShowInfo.Location = New System.Drawing.Point(12, 157)
         Me.btnShowInfo.Name = "btnShowInfo"
         Me.btnShowInfo.Size = New System.Drawing.Size(150, 23)
         Me.btnShowInfo.TabIndex = 2
         Me.btnShowInfo.Text = "Show Info"
         Me.btnShowInfo.UseVisualStyleBackColor = True
         '
+        'btnDoors
+        '
+        Me.btnDoors.Location = New System.Drawing.Point(12, 70)
+        Me.btnDoors.Name = "btnDoors"
+        Me.btnDoors.Size = New System.Drawing.Size(150, 23)
+        Me.btnDoors.TabIndex = 3
+        Me.btnDoors.Text = "Doors"
+        Me.btnDoors.UseVisualStyleBackColor = True
+        '
+        'btnAccelerate
+        '
+        Me.btnAccelerate.Location = New System.Drawing.Point(12, 99)
+        Me.btnAccelerate.Name = "btnAccelerate"
+        Me.btnAccelerate.Size = New System.Drawing.Size(150, 23)
+        Me.btnAccelerate.TabIndex = 4
+        Me.btnAccelerate.Text = "Accelerate"
+        Me.btnAccelerate.UseVisualStyleBackColor = True
+        '
+        'btnPowerWeight
+        '
+        Me.btnPowerWeight.Location = New System.Drawing.Point(12, 128)
+        Me.btnPowerWeight.Name = "btnPowerWeight"
+        Me.btnPowerWeight.Size = New System.Drawing.Size(150, 23)
+        Me.btnPowerWeight.TabIndex = 5
+        Me.btnPowerWeight.Text = "Power/Weight"
+        Me.btnPowerWeight.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(231, 176)
+        Me.ClientSize = New System.Drawing.Size(231, 204)
+        Me.Controls.Add(Me.btnPowerWeight)
+        Me.Controls.Add(Me.btnAccelerate)
+        Me.Controls.Add(Me.btnDoors)
         Me.Controls.Add(Me.btnShowInfo)
         Me.Controls.Add(Me.btnColor)
         Me.Controls.Add(Me.btnName)
@@ -71,4 +104,7 @@ Partial Class Form1
     Friend WithEvents btnName As Button
     Friend WithEvents btnColor As Button
     Friend WithEvents btnShowInfo As Button
+    Friend WithEvents btnDoors As Button
+    Friend WithEvents btnAccelerate As Button
+    Friend WithEvents btnPowerWeight As Button
 End Class
