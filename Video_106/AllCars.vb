@@ -114,6 +114,11 @@
                 End If
             End Set
         End Property
+
+        'Gives the information about the truck
+        Public Function getTruckInfo() As String
+            Return "Car name: " & carName & Environment.NewLine & "Car color: " & color & Environment.NewLine & "Number of doors" & numberOfDoors & Environment.NewLine & "Car speed: " & Speed & Environment.NewLine & "Cab Size: " & truckCabLength & Environment.NewLine & "Bed Length: " & truckBedLength
+        End Function
     End Class
 
     'BedLength Enumeration: short medium long
