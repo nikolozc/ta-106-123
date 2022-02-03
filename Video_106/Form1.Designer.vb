@@ -30,11 +30,12 @@ Partial Class Form1
         Me.btnPowerWeight = New System.Windows.Forms.Button()
         Me.btnNewCar = New System.Windows.Forms.Button()
         Me.listCars = New System.Windows.Forms.ListBox()
+        Me.comboCarTypes = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnName
         '
-        Me.btnName.Location = New System.Drawing.Point(12, 59)
+        Me.btnName.Location = New System.Drawing.Point(12, 96)
         Me.btnName.Name = "btnName"
         Me.btnName.Size = New System.Drawing.Size(150, 23)
         Me.btnName.TabIndex = 0
@@ -43,7 +44,7 @@ Partial Class Form1
         '
         'btnColor
         '
-        Me.btnColor.Location = New System.Drawing.Point(12, 88)
+        Me.btnColor.Location = New System.Drawing.Point(12, 125)
         Me.btnColor.Name = "btnColor"
         Me.btnColor.Size = New System.Drawing.Size(150, 23)
         Me.btnColor.TabIndex = 1
@@ -52,7 +53,7 @@ Partial Class Form1
         '
         'btnShowInfo
         '
-        Me.btnShowInfo.Location = New System.Drawing.Point(12, 204)
+        Me.btnShowInfo.Location = New System.Drawing.Point(12, 241)
         Me.btnShowInfo.Name = "btnShowInfo"
         Me.btnShowInfo.Size = New System.Drawing.Size(150, 23)
         Me.btnShowInfo.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class Form1
         '
         'btnDoors
         '
-        Me.btnDoors.Location = New System.Drawing.Point(12, 117)
+        Me.btnDoors.Location = New System.Drawing.Point(12, 154)
         Me.btnDoors.Name = "btnDoors"
         Me.btnDoors.Size = New System.Drawing.Size(150, 23)
         Me.btnDoors.TabIndex = 3
@@ -70,7 +71,7 @@ Partial Class Form1
         '
         'btnAccelerate
         '
-        Me.btnAccelerate.Location = New System.Drawing.Point(12, 146)
+        Me.btnAccelerate.Location = New System.Drawing.Point(12, 183)
         Me.btnAccelerate.Name = "btnAccelerate"
         Me.btnAccelerate.Size = New System.Drawing.Size(150, 23)
         Me.btnAccelerate.TabIndex = 4
@@ -79,7 +80,7 @@ Partial Class Form1
         '
         'btnPowerWeight
         '
-        Me.btnPowerWeight.Location = New System.Drawing.Point(12, 175)
+        Me.btnPowerWeight.Location = New System.Drawing.Point(12, 212)
         Me.btnPowerWeight.Name = "btnPowerWeight"
         Me.btnPowerWeight.Size = New System.Drawing.Size(150, 23)
         Me.btnPowerWeight.TabIndex = 5
@@ -101,14 +102,24 @@ Partial Class Form1
         Me.listCars.ItemHeight = 15
         Me.listCars.Location = New System.Drawing.Point(186, 6)
         Me.listCars.Name = "listCars"
-        Me.listCars.Size = New System.Drawing.Size(235, 229)
+        Me.listCars.Size = New System.Drawing.Size(235, 259)
         Me.listCars.TabIndex = 7
+        '
+        'comboCarTypes
+        '
+        Me.comboCarTypes.FormattingEnabled = True
+        Me.comboCarTypes.Items.AddRange(New Object() {"Car", "Truck", "SportsCar"})
+        Me.comboCarTypes.Location = New System.Drawing.Point(12, 35)
+        Me.comboCarTypes.Name = "comboCarTypes"
+        Me.comboCarTypes.Size = New System.Drawing.Size(150, 23)
+        Me.comboCarTypes.TabIndex = 8
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 239)
+        Me.ClientSize = New System.Drawing.Size(433, 269)
+        Me.Controls.Add(Me.comboCarTypes)
         Me.Controls.Add(Me.listCars)
         Me.Controls.Add(Me.btnNewCar)
         Me.Controls.Add(Me.btnPowerWeight)
@@ -131,4 +142,5 @@ Partial Class Form1
     Friend WithEvents btnPowerWeight As Button
     Friend WithEvents btnNewCar As Button
     Friend WithEvents listCars As ListBox
+    Friend WithEvents comboCarTypes As ComboBox
 End Class

@@ -1,17 +1,21 @@
 ﻿Namespace AllCars
     Class Car
+        Implements IDisposable
+
         'Public and Private Fields
         Public color As String
         Public carName As String
         Private intSpeed As Integer
         Private intNumberOfDoors As Integer
         Private intHorsePower As Integer
+        Private disposedValue As Boolean
 
         'Constructor
         Sub New()
             color = "Red"
             intSpeed = 0
             intNumberOfDoors = 5
+            intHorsePower = 250
         End Sub
 
         'Gets speed
@@ -63,16 +67,42 @@
                 Return True
             End If
         End Function
+
+        Protected Overridable Sub Dispose(disposing As Boolean)
+            If Not disposedValue Then
+                If disposing Then
+                    ' TODO: dispose managed state (managed objects)
+                End If
+
+                ' TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                ' TODO: set large fields to null
+                disposedValue = True
+            End If
+        End Sub
+
+        ' ' TODO: override finalizer only if 'Dispose(disposing As Boolean)' has code to free unmanaged resources
+        ' Protected Overrides Sub Finalize()
+        '     ' Do not change this code. Put cleanup code in 'Dispose(disposing As Boolean)' method
+        '     Dispose(disposing:=False)
+        '     MyBase.Finalize()
+        ' End Sub
+
+        Public Sub Dispose() Implements IDisposable.Dispose
+            ' Do not change this code. Put cleanup code in 'Dispose(disposing As Boolean)' method
+            Dispose(disposing:=True)
+            GC.SuppressFinalize(Me)
+        End Sub
     End Class
 
     Class SportsCar
         Inherits Car
 
-        Private weight As Integer
+        Public weight As Integer
 
         Sub New()
             color = "Red"
             numberOfDoors = 2
+            weight = 1000
         End Sub
 
         Public Function getSportsInfo() As String
@@ -81,7 +111,7 @@
 
         'Get Power to Weight Ratio
         Public Function getPowerToWeightRatio() As Double
-            Return CType(HorsePower, Double) / weight
+            Return HorsePower / weight
         End Function
     End Class
 
